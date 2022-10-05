@@ -18,6 +18,12 @@ daml new <project_name>
 
 Creates new project with a specified name.
 
+```powershell
+daml new --list
+```
+
+Lists all the available project templates
+
 ---
 
 ## References
