@@ -30,9 +30,7 @@ daml new --list
 
 Lists all the available project templates
 
-## Essential concepts
-
-### Templates
+## Templates
 
 They are the most important component of **Daml** ecosystem. They define **data** and **behavior** of **Contracts** on **Daml Ledger**. Which means they provide logic that answers these questions:
 
@@ -40,6 +38,42 @@ They are the most important component of **Daml** ecosystem. They define **data*
 * Who can alter the ledger?
 * How can they alter the ledger?
 * Under what conditions?
+
+### `With` section
+
+**Template** declaration must start with: `with` section. Data fields are defined in the `with` section.
+
+> The requirement the `with` section is to contain at least one `Party`.  
+
+```haskell
+template MyOffer
+  with
+    issuer: Party
+    owner: Party
+    price: Decimal
+    royaltyRate: Deciaml
+    (...)
+```
+
+> In general `with` section a mix of **Parties** included in the contract as well as the contract's **payload**.
+
+### `where` section
+
+The `where` section contains:
+
+* `signatory` - list of **Parties** that are being stated as **signatories** of the **contract**. A **signatory** is a participant in a contract which consented to the creation of that template.
+
+  >The requirement is to have at least one **Party** stated as the signatory
+
+* `observer` (optional) - including **Parties** as **observers** allows to make these **Parties** aware of the contract. Whereas if some **Party** is specified in the `controller` block, the **Party** will be aware of the contract anyway, so the `observer` block should be used for granting the right to see the contract to additional **Parties**.
+
+* `ensure` (optional) - boolean expression, that has to be `true` for the contract creation. E.g.  
+
+```haskell
+ensure royaltyRate >= 0.0 && lastPrice >= 0.0
+```
+
+* `key`
 
 ---
 
