@@ -16,13 +16,18 @@ Displays versions of installed SKDs.
 daml new <project_name>
 ```
 
-Creates new project with a specified name.
+Creates new project with a specified name and default template. To specify the template use:
+
+```powershell
+daml new <project_name> --template <template_name>
+```
 
 ```powershell
 daml new --list
 ```
 
 Lists all the available project templates
+
 
 ---
 
