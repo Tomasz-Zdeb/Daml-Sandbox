@@ -4,7 +4,19 @@ An overview guide on [Daml](https://www.digitalasset.com/developers) language.
 
 ## Getting started
 
-[Daml docs](https://docs.daml.com/getting-started/installation.html#) provide a great **Getting Started** guide. This project will be based on **Daml Open Source**
+[Daml docs](https://docs.daml.com/getting-started/installation.html#) provide a great **Getting Started** guide. This project will be based on **Daml Open Source**.
+
+```powershell
+daml version
+```
+
+Displays versions of installed SKDs.
+
+```powershell
+daml new <project_name>
+```
+
+Creates new project with a specified name.
 
 ---
 
