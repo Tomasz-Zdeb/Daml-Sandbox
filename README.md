@@ -30,6 +30,17 @@ daml new --list
 
 Lists all the available project templates
 
+## Essential concepts
+
+### Templates
+
+They are the most important component of **Daml** ecosystem. They define **data** and **behavior** of **Contracts** on **Daml Ledger**. Which means they provide logic that answers these questions:
+
+* Who can see what?
+* Who can alter the ledger?
+* How can they alter the ledger?
+* Under what conditions?
+
 ---
 
 ## References
