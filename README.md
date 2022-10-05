@@ -22,8 +22,10 @@ Creates new project with a specified name.
 
 ## References
 
-* [Daml docs](https://docs.daml.com/)
+* [Daml Docs](https://docs.daml.com/)
 
-* [Daml developer forum](https://discuss.daml.com/)
+* [Daml Developer forum](https://discuss.daml.com/)
 
-* [Daml talent lms (requires account)](https://daml.talentlms.com/dashboard/index)
+* [Daml Cheat Sheet](https://docs.daml.com/cheat-sheet)
+
+* [Daml Talent Lms (requires account)](https://daml.talentlms.com/dashboard/index)
