@@ -28,7 +28,6 @@ daml new --list
 
 Lists all the available project templates
 
-
 ---
 
 ## References
