@@ -114,6 +114,28 @@ The most of **daml** action will be taking place inside the **choice's** body. D
 
 * **Body** of the choice, starting with `do` keyword.
 
+  All the actions one would like to perform are being defined there. E.g.
+  * asserting any features of parameters that have been passed in
+  * archiving actions
+  * creating actions
+  * any other ledger updates
+
+Example **choice** could look something like this:
+
+ ```haskell
+do
+  newToken <- create Token
+    with
+      owner = newOwner
+      lastPrice = price
+      (...)
+  return newToken
+ ```
+
+In above example new **Token** is being created, it's properties are being initialazed with values: **newOwner** and **price**, which are data fields of the template. The **token** is assigned to the variable **newToken**.
+
+> despite creating the Token it is also being **archived**, but this does not need to be specified, since it's the default behaviour - always the contract from from which choice is called is being removed from the active state of the ledger. This behaviour can be overriden by `non consuming` keyword.
+
 ---
 
 ## References
