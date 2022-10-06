@@ -136,6 +136,8 @@ In above example new **Token** is being created, it's properties are being initi
 
 > despite creating the Token it is also being **archived**, but this does not need to be specified, since it's the default behaviour - always the contract from from which choice is called is being removed from the active state of the ledger. This behaviour can be overriden by `non consuming` keyword.
 
+Choices also are **atomic** similar to **SQL** transactions. If some part of the choice fails - the whole operation is rolled back
+
 ---
 
 ## References
