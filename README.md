@@ -69,11 +69,50 @@ The `where` section contains:
 
 * `ensure` (optional) - boolean expression, that has to be `true` for the contract creation. E.g.  
 
-```haskell
-ensure royaltyRate >= 0.0 && lastPrice >= 0.0
-```
+  ```haskell
+  ensure royaltyRate >= 0.0 && lastPrice >= 0.0
+  ```
 
-* `key`
+* `key` - a uniqe identifier of a token E.g.
+
+  ```haskell
+  key (issuer, owner, description): (Party, Party, Text)
+  ```
+
+  means that combination of these three data items must be unique. All data types can be used for `key` construction.
+
+* `maintainer` - a **Party** responsible for `key` uniqueness (although `key` uniqueness if provided by the ledger itself)
+
+* other blocks that create so called **choices**
+
+### Choices
+
+> A template can include **zero or more** **choices**. **Choices** are very important, because they define the rules on how the ledger can be changed, like: **who can change** the ledger? under **what conditions** and **what do** these changes actually **mean**?
+
+The most of **daml** action will be taking place inside the **choice's** body. Despite choices there is only one other way to mutate the ledger - create contract from scratch. But only contract with single signatory can be created from scratch, so once again - most of the ledger updated will take place as the result of **choice** execution.
+
+* `controller` is an obligatory part of every **choice** that indicate what **Parties** can exercise the **choice**. All of the specified `controller` **Parties** have to sign off to perform the **choice** execution.
+
+  ```haskell
+  controller newOwner, userAdmin can 
+  ```
+
+* **Name** of the **choice** followed by **return type** is the next element of choice structure E.g.
+
+  ```haskell
+  controller newOwner, userAdmin can 
+    AcceptToken: ContractId Token
+  ```
+
+  **choice's** **return type** provides convenience, to other **choice** that might be calling this one, so the other **choice** can get a handle on the result of executing that **choice**.
+
+  There is no necesisty to include all the results of a **choice** in the **return type**, but it is convenient to do so.
+
+  If the **return type** is specified, the last line of the **choice** with the **return** statement and returned object, must match the type with the **return type**.
+
+* **Parameters** (optionally) can be specified as a next part, using `with` keyword.
+
+* **Body** of the choice, starting with `do` keyword.
 
 ---
 
