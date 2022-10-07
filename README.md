@@ -39,6 +39,8 @@ They are the most important component of **Daml** ecosystem. They define **data*
 * How can they alter the ledger?
 * Under what conditions?
 
+> Contracts are immutable in **Daml** - once created they cannot be changed
+
 ### `With` section
 
 **Template** declaration must start with: `with` section. Data fields are defined in the `with` section.
