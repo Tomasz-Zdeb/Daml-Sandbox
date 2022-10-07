@@ -140,6 +140,20 @@ In above example new **Token** is being created, it's properties are being initi
 
 Choices also are **atomic** similar to **SQL** transactions. If some part of the choice fails - the whole operation is rolled back
 
+## NFT
+
+stand for **Private Non-fungible token**
+
+main characteristics of **NFTs** are:
+
+* Content creators can mint **NFTs**
+* Owners can sell their **NFTs**
+* to do so they have to pay royalties to content creators
+
+**NFTs** can be either **private** or **public**. What separates private **NFTs** from public **NFTs** is that:
+
+* participants of the network whether they are creators or owners must be explicitly permitted by some kind of **userAdmin**
+
 ---
 
 ## References
