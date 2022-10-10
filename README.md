@@ -89,6 +89,8 @@ The `where` section contains:
 
 ### Choices
 
+#### Explained on old but easier to understand syntax
+
 > A template can include **zero or more** **choices**. **Choices** are very important, because they define the rules on how the ledger can be changed, like: **who can change** the ledger? under **what conditions** and **what do** these changes actually **mean**?
 
 The most of **daml** action will be taking place inside the **choice's** body. Despite choices there is only one other way to mutate the ledger - create contract from scratch. But only contract with single signatory can be created from scratch, so once again - most of the ledger updated will take place as the result of **choice** execution.
@@ -139,6 +141,21 @@ In above example new **Token** is being created, it's properties are being initi
 > despite creating the Token it is also being **archived**, but this does not need to be specified, since it's the default behaviour - always the contract from from which choice is called is being removed from the active state of the ledger. This behaviour can be overriden by `non consuming` keyword.
 
 Choices also are **atomic** similar to **SQL** transactions. If some part of the choice fails - the whole operation is rolled back
+
+#### Creating choices using new syntax
+
+[Official documentation](https://docs.daml.com/daml/reference/choices.html) explains the differences very well nevertheless it is worth to mention some basic information here as well.
+
+The new syntax is more simmilar to object oriented programming lanugages class syntax. Analysing below example could be pretty self-explainatory
+
+```haskell
+choice <Name_of_the_choice> : <Return_type>
+      with --arguments here
+        newOwner : Party
+      controller owner --controler here
+      do create this with --body starts with do
+           owner = newOwner
+```
 
 ## NFT
 
