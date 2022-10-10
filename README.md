@@ -146,13 +146,16 @@ Choices also are **atomic** similar to **SQL** transactions. If some part of the
 
 [Official documentation](https://docs.daml.com/daml/reference/choices.html) explains the differences very well nevertheless it is worth to mention some basic information here as well.
 
-The new syntax is more simmilar to object oriented programming lanugages class syntax. Analysing below example could be pretty self-explainatory
+The **new syntax** is more simmilar to object oriented programming lanugages class syntax. Analysing below example could be pretty self-explainatory, but there is something that should be noticed with the **new syntax**:
+
+> **Controllers** are not anymore automatically added **as observers**, therefore they have to be explicitly stated so, to be able to see the contract and exercise the choice.
 
 ```haskell
 choice <Name_of_the_choice> : <Return_type>
       with --arguments here
         newOwner : Party
-      controller owner --controler here
+      observer owner
+      controller owner
       do create this with --body starts with do
            owner = newOwner
 ```
