@@ -142,8 +142,7 @@ Choices also are **atomic** similar to **SQL** transactions. If some part of the
 
 ## NFT
 
-stand for **Private Non-fungible token**
-
+stands for **Private Non-fungible token**.
 main characteristics of **NFTs** are:
 
 * Content creators can mint **NFTs**
