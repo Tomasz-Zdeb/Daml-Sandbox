@@ -1,0 +1,65 @@
+module Payment where
+
+template Payable -- declares a fact that such there is a payment to be performed
+  with
+   amount: Decimal
+   currency: Text
+   from: Party
+   to: Party
+   reference: Text -- kind of memo (why from pays to to)
+  where
+    signatory from
+    observer to -- allows to party to be able to see this agreement
+    -- to party has no obligations or actions here in this contract
+
+    choice ClaimPaid: ContractId PaymentClaim
+      with
+        transactionID: Text
+      observer from 
+      controller from
+      do
+        create PaymentClaim with ..
+
+template PaymentClaim -- declaration of performing the payment by from party
+  with
+    amount: Decimal
+    currency: Text
+    from: Party
+    to: Party
+    reference: Text
+    transactionID: Text
+  where
+    signatory from
+    
+    choice Receive: ContractId Receipt -- to Party can confirm that it received the payment
+      observer to
+      controller to
+      do
+        received <- getTime -- uses getTime function to fetch current timestamp
+        -- timestamp is assigned to local received data field
+        -- and then thanks to double dot operator
+        -- passed to the created Receipt
+        create Receipt
+          with ..
+
+template Receipt -- confirmation from both sides that the payment took place
+  with
+    amount: Decimal
+    currency: Text
+    from: Party
+    to: Party
+    reference: Text
+    transactionID: Text
+    received: Time
+  where
+    signatory to, from
+
+    -- this choice seems to do nothing, but thanks
+    -- to the default behaviour which is contract
+    -- archivisation after execution of a choice
+    -- this choice performs contract archivisation
+    choice Dismiss: ()
+      observer from
+      controller from
+      do
+        return ()
