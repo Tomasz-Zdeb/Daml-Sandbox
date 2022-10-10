@@ -1,0 +1,57 @@
+module Token where
+
+-- content creators can mint NFTs
+-- owners can sell their NFTs
+-- while selling they have to pay royalties
+-- participants must be explicitly permitted
+
+-- behaviour
+-- datamodel
+-- rights/obligations
+template Token
+  with
+    issuer: Party
+    owner: Party
+    description:  Text
+    userAdmin: Party -- Party that makes sure that issuer and owner are verified and legitimate
+    issued: Time
+    lastPrice: Decimal
+    currency: Text
+  where
+    signatory issuer, userAdmin
+    
+    choice Offer : ContractId TokenOffer
+      with
+        newOwner: Party
+        price: Decimal
+      observer owner
+      controller owner
+      do 
+        create TokenOffer with ..
+
+-- express the idea of giving the ownership of a token to a new owner at a given price
+-- therefore the new owner can agree or decline the offer
+template TokenOffer
+  with
+    issuer: Party
+    owner: Party
+    description:  Text
+    userAdmin: Party -- Party that makes sure that issuer and owner are verified and legitimate
+    issued: Time
+    lastPrice: Decimal
+    currency: Text
+    newOwner: Party
+    price: Decimal
+    
+  where
+    signatory issuer, userAdmin, owner
+
+    choice AcceptToken: ContractId Token
+      observer newOwner
+      controller newOwner
+      do
+        create Token
+          with
+            owner = newOwner
+            lastPrice = price
+            ..
