@@ -2,7 +2,7 @@
 
 `App4PrivateNFT` is the project that acts as a resource to this guide.
 
-* Think of what the rights and obbligation around the **Token** are and express them as templates bundled in a single module (**Token module**) E.g.
+* Think of what the rights and obbligation around the **Token** are and express them as templates bundled in a single module (`Token module`) E.g.
   * `Token template` - should contain:
     * data fields to identify all the parties involved and describe the token: **issuer**, **owner**, **description**, **admin user**, **timestamp of when it was issued**, **previous price that the token was traded on**, **currency that the payments are made in**.
     * behaviour - **a choice** that's offering the token for sale to another party. This could be performed by creating an offer based on a template representing token offer.  
@@ -12,7 +12,7 @@
 
   What above structures are missing is the **payment** that should take place while the offer is accepted. That could be created in separate module.
 
-* Think of what are the obbligations and behaviours around the **payment**. Express them as templates in a module (**Payment module**) E.g.
+* Think of what are the obbligations and behaviours around the **payment**. Express them as templates in a module (`Payment module`) E.g.
   * `Payable template` - should contain:
     * data fields to identify all the parties involved and describe the payable - which is a claim that there is a payment to be made, in a way that will allow to perform the payment. These are: **amount to be paid**, **currency of the payment**, **party that pays**, **party that receives the payment**, **some kind of memo - why the payment takes place**.
     * behaviours - a **choice** that allows to claim they execution of payment by creating a **Payment** contract by from side that includes additionally the **transaction ID**.
@@ -24,3 +24,6 @@
   * `Receipt template` - should contain:
     * data fields to identify the **confirmation of payment**, which are basically the same data fields that `PaymentClaim template` contains + a **timestamp** of payment taking place.  
     * behaviours - a choice that seems to be doing nothing at the first glance, but thanks to the default choice's consequence results in contract archivisation.
+
+* Right now `Token module` and `Payment module` have no connection. There should be some itegration between those two performed.
+  * First of all `Payment module` should be imported in `Token module` 
