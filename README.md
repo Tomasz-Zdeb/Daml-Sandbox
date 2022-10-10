@@ -153,6 +153,8 @@ main characteristics of **NFTs** are:
 
 * participants of the network whether they are creators or owners must be explicitly permitted by some kind of **userAdmin**
 
+Guide on example of **NFT** created using **Daml** can be found [here](./creating-private-NFT.md).
+
 ---
 
 ## References
