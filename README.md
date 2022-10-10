@@ -162,7 +162,7 @@ choice <Name_of_the_choice> : <Return_type>
 
 ## Double dot operator
 
-`..` is used when creating an entry from a template, to pass all data fields from the calling entry. E.g.
+`..` is used when creating a contract from a template, to pass all data fields from the calling contract. E.g.
 
 ```haskell
 do
