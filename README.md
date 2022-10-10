@@ -160,6 +160,10 @@ choice <Name_of_the_choice> : <Return_type>
            owner = newOwner
 ```
 
+## Modules
+
+They are utilized to group templates together in order to form logical aggregations around some common matter. It's a similar concept to **namespaces** found in **Object Oriented Programming**.
+
 ## Double dot operator
 
 `..` is used when creating a contract from a template, to pass all data fields from the calling contract. E.g.
