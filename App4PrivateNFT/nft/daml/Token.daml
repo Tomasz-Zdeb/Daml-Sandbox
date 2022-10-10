@@ -20,7 +20,7 @@ template Token
   where
     signatory issuer, userAdmin
     
-    choice Offer : ContractId TokenOffer
+    choice Offer: ContractId TokenOffer
       with
         newOwner: Party
         price: Decimal
