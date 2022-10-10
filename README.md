@@ -160,6 +160,17 @@ choice <Name_of_the_choice> : <Return_type>
            owner = newOwner
 ```
 
+## Double dot operator
+
+`..` is used when creating an entry from a template, to pass all data fields from the calling entry. E.g.
+
+```haskell
+do
+  create PaymentClaim with ..
+```
+
+will pass all data fields stated in the template that contains the choice invoking the PaymentClaim to PaymentClaim.
+
 ## NFT
 
 stands for **Private Non-fungible token**.
