@@ -1,5 +1,6 @@
 module Token where
 
+import Payment
 -- content creators can mint NFTs
 -- owners can sell their NFTs
 -- while selling they have to pay royalties
@@ -17,6 +18,7 @@ template Token
     issued: Time
     lastPrice: Decimal
     currency: Text
+    royaltyRate: Decimal
   where
     signatory issuer, userAdmin
     
@@ -42,16 +44,34 @@ template TokenOffer
     currency: Text
     newOwner: Party
     price: Decimal
-    
+    royaltyRate: Decimal
   where
     signatory issuer, userAdmin, owner
 
-    choice AcceptToken: ContractId Token
+    choice AcceptToken: (ContractId Token, ContractId Payable, ContractId Payable)
       observer newOwner
       controller newOwner
       do
-        create Token
+        fromNewOwnerToOwner <- create Payable
+          with
+            from = newOwner
+            to = owner
+            amount = price
+            currency
+            reference = "Notional for '" <> description <>"'"
+
+        royaltyPayment <- create Payable
+          with
+            from = newOwner
+            to = issuer
+            amount = price * royaltyRate
+            currency
+            reference = "Royalty for '" <> description <>"'"
+
+        newToken <- create Token
           with
             owner = newOwner
             lastPrice = price
             ..
+
+        return (newToken, fromNewOwnerToOwner, royaltyPayment)
