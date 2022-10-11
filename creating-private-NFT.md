@@ -26,4 +26,4 @@
     * behaviours - a choice that seems to be doing nothing at the first glance, but thanks to the default choice's consequence results in contract archivisation.
 
 * Right now `Token module` and `Payment module` have no connection. There should be some itegration between those two performed.
-  * First of all `Payment module` should be imported in `Token module` 
+  * First of all `Payment module` should be imported in `Token module`
