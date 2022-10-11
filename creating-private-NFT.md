@@ -27,3 +27,7 @@
 
 * Right now `Token module` and `Payment module` have no connection. There should be some itegration between those two performed.
   * First of all `Payment module` should be imported in `Token module`
+  * Think of when the payment contract should be created? - the most appropriate place seems to be at the moment when **Token** offer is being accepted.
+  * It is also good to return reference to created payable in the offer's choice. (If there is already any value returned, they can be combined in a tuple and then returned).
+  * Remember that every transaction should also include some royalty for the **NFT** creator, therefore data field for **royalty rate** should be included in the **Token** contract template.
+  * Royalty is just another `Payable` that is issued at the same moment when the payment for the old owner, but with the price based on royalty rate.
