@@ -183,6 +183,29 @@ will pass all data fields stated in the template that contains the choice invoki
 reference = "Notional for '" <> description <>"'"
 ```
 
+## Choice returning multiple values
+
+In order to return multiple values, assign the values that are about to be returned to variables and combine them in a tuple. Return tuple of theses values. E.g.
+
+```haskell
+do
+        fromNewOwnerToOwner <- create Payable
+          with
+            from = newOwner
+            to = owner
+            amount = price
+            currency
+            reference = "Notional for '" <> description <>"'"
+
+        newToken <- create Token
+          with
+            owner = newOwner
+            lastPrice = price
+            ..
+
+        return (newToken, fromNewOwnerToOwner)
+```
+
 ## NFT
 
 stands for **Private Non-fungible token**.
