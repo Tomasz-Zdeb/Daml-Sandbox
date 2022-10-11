@@ -175,6 +175,14 @@ do
 
 will pass all data fields stated in the template that contains the choice invoking the PaymentClaim to PaymentClaim.
 
+## Text conatenation
+
+`<>` operator is used to concatenate text E.g.
+
+```haskell
+reference = "Notional for '" <> description <>"'"
+```
+
 ## NFT
 
 stands for **Private Non-fungible token**.
