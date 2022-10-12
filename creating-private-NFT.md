@@ -31,3 +31,27 @@
   * It is also good to return reference to created payable in the offer's choice. (If there is already any value returned, they can be combined in a tuple and then returned).
   * Remember that every transaction should also include some royalty for the **NFT** creator, therefore data field for **royalty rate** should be included in the **Token** contract template.
   * Royalty is just another `Payable` that is issued at the same moment when the payment for the old owner, but with the price based on royalty rate.
+
+* Since this **NFT** is intended to be private, there is a need to implement the permission module: E.g. `UserAdmin module`. There should be two kind of user templates:
+  * `Issuer template` - should contain:
+    * data fields to represent: **NFT issuer** party and the **admin** party, that will be approving the issuer access, so the **admin** shoud be stated as **signatory** of this contract.
+    * behaviours:
+      * a choice that will allow the **issuer** to actualy issue - mint the token. With the default behaviour: a contract is being archived after execution of a choice, which in this case would mean that the permission would allow to mint only one token. Therefore changing the default behavior - not to archive the contract after execution of the choice, could be a way to give permission to the issuer once and allow him to mint tokens multiple times. `nonconsuming` keyword is used to do so.
+      * a choice that revokes the **issuer** rights, in order to keep control over issuers. The choice can be a blank one, since the only desired outcome is to archive the contract.
+  * `Issuer request template` - which should contain
+    * the same data fields that the `Issuer template`, and some adnotation that will describe his request E.g. callled `reason`
+    * behaviours:
+      * a choice that allows **admin** to accept a request, which results in `Issuer` contract creation.
+      * a choice that allows **admin** to reject a request. That choice simply archives the contract.
+
+  > in order to controll the owners, let's add **admin** to the controllers of `Issuer` > `AcceptToken` choice, but that does not mean we do not need `Owner template` - [...]
+  * `Owner template` - should contain:
+    * data fields to represent: **NFT owner** party and the **admin** party, that will be approving the owner access, so the **admin** shoud be stated as **signatory** of this contract.
+    * behaviours:
+      * a choice to accept a **Token** offer, which will allow **owner** to acquire a **Token**. Since the desired behaviour is to allow **owner** to acquire **Tokens** unless his rights are revoked, let's make this choice: `nonconsuming`.
+      * a choice that revokes the **owner** rights, in order to keep control over owners. The choice can be a blank one, since the only desired outcome is to archive the contract.
+  * `Owner request template` - should contain:
+    * the same data fields that the `Owner template`, and some adnotation that will descripe his request E.g. callled `reason`
+    * behaviours:
+      * a choice that allows **admin** to accept a request, which results in `Owner` contract creation.
+      * a choice that allows **admin** to reject a request. That choice simply archives the contract.
