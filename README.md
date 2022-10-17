@@ -223,6 +223,24 @@ main characteristics of **NFTs** are:
 
 Guide on example of **NFT** created using **Daml** can be found [here](./creating-private-NFT.md).
 
+## Visualizing templates
+
+**Daml SDK** contains a functionality to generate `.DOT` files with **module diagrams** by default. While using **VS Code**:
+
+> **Command pallete** > **Visualize Daml Project**
+
+is used to generate the diagram. To preview generated diagram use any **Graphviz** extension of choice. In my case couple of them were not working.
+
+Example diagram:
+![example module diagram](./App4PrivateNFT/graph-vector.svg)
+
+* bold is used to display **template name**
+* underneath **data fields** are displayed with regular font
+* ellipses contain template's **choices**
+* arrows represent **realation** of type: ***choice results in contract creation***
+
+Additional info can be found in [Daml Docs article](https://docs.daml.com/tools/visual.html) dedicated to that matter.
+
 ---
 
 ## References
