@@ -212,6 +212,38 @@ In **Daml** it is a concept of a variable being allowed to be `null`.
 
 There's a dedicated module in [Daml Standard Library](https://docs.daml.com/daml/stdlib/DA-Optional.html) to help deal with optional parameters.
 
+## Fmap: <$>
+
+It's a mapping function that allows to map some **functions** onto **arrays**. E.g.
+
+```haskell
+(\x -> x*x) <$> [1,2,3]
+```
+
+above code will map **square function** onto array, which will result in array of values `[1,4,9]`, since the **square function** will be executed on every element of the array.
+
+Constructors are also allowe to be used on the left side of the operator. (Which makes sense since constructors are also functions) E.g.
+
+```haskell
+SomeTemplate <$> [1,2,3]
+```
+
+will result in contract array `[Some1, Some2, Some3]`.
+
+Surprisingly right side of the operator does not have to be an array, but also **ledger update**
+
+```haskell
+SomeTemplate <$> create Thing with ..
+```
+
+Above code could be equivalent to:
+
+```haskell
+do
+  x <- create Thing with ..
+  return (SomeTemplate x)
+```
+
 ---
 
 ## NFT
