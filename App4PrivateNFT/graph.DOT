@@ -1,0 +1,120 @@
+digraph G {
+compound=true;
+rankdir=LR;
+subgraph cluster_Token{
+n0[label=Create][color=green]; 
+n1[label=Offer][color=red]; 
+n2[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>Token</b></td></tr><tr><td align="left">issuer</td></tr> 
+<tr><td align="left">owner</td></tr> 
+<tr><td align="left">description</td></tr> 
+<tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">issued</td></tr> 
+<tr><td align="left">lastPrice</td></tr> 
+<tr><td align="left">currency</td></tr> 
+<tr><td align="left">royaltyRate</td></tr> 
+</table>>;color=blue
+}subgraph cluster_TokenOffer{
+n3[label=Create][color=green]; 
+n4[label=AcceptToken][color=red]; 
+n5[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>TokenOffer</b></td></tr><tr><td align="left">issuer</td></tr> 
+<tr><td align="left">owner</td></tr> 
+<tr><td align="left">description</td></tr> 
+<tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">issued</td></tr> 
+<tr><td align="left">lastPrice</td></tr> 
+<tr><td align="left">currency</td></tr> 
+<tr><td align="left">newOwner</td></tr> 
+<tr><td align="left">price</td></tr> 
+<tr><td align="left">royaltyRate</td></tr> 
+</table>>;color=blue
+}subgraph cluster_Payable{
+n6[label=Create][color=green]; 
+n7[label=ClaimPaid][color=red]; 
+n8[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>Payable</b></td></tr><tr><td align="left">amount</td></tr> 
+<tr><td align="left">currency</td></tr> 
+<tr><td align="left">from</td></tr> 
+<tr><td align="left">to</td></tr> 
+<tr><td align="left">reference</td></tr> 
+</table>>;color=blue
+}subgraph cluster_PaymentClaim{
+n9[label=Create][color=green]; 
+n10[label=Receive][color=red]; 
+n11[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>PaymentClaim</b></td></tr><tr><td align="left">amount</td></tr> 
+<tr><td align="left">currency</td></tr> 
+<tr><td align="left">from</td></tr> 
+<tr><td align="left">to</td></tr> 
+<tr><td align="left">reference</td></tr> 
+<tr><td align="left">transactionID</td></tr> 
+</table>>;color=blue
+}subgraph cluster_Receipt{
+n12[label=Create][color=green]; 
+n13[label=Dismiss][color=red]; 
+n14[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>Receipt</b></td></tr><tr><td align="left">amount</td></tr> 
+<tr><td align="left">currency</td></tr> 
+<tr><td align="left">from</td></tr> 
+<tr><td align="left">to</td></tr> 
+<tr><td align="left">reference</td></tr> 
+<tr><td align="left">transactionID</td></tr> 
+<tr><td align="left">received</td></tr> 
+</table>>;color=blue
+}subgraph cluster_Issuer{
+n15[label=Create][color=green]; 
+n16[label=MintToken][color=green]; 
+n17[label=RevokeIssuer][color=red]; 
+n18[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>Issuer</b></td></tr><tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">issuer</td></tr> 
+</table>>;color=blue
+}subgraph cluster_IssuerRequest{
+n19[label=Create][color=green]; 
+n20[label=GrantIssuerRight][color=red]; 
+n21[label=RejectIssuerRequest][color=red]; 
+n22[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>IssuerRequest</b></td></tr><tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">issuer</td></tr> 
+<tr><td align="left">reason</td></tr> 
+</table>>;color=blue
+}subgraph cluster_Owner{
+n23[label=Create][color=green]; 
+n24[label=AcceptTokenAsNewOwner][color=green]; 
+n25[label=AcceptTokenByKey][color=green]; 
+n26[label=RevokeOwnerRights][color=red]; 
+n27[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>Owner</b></td></tr><tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">owner</td></tr> 
+</table>>;color=blue
+}subgraph cluster_OwnerRequest{
+n28[label=Create][color=green]; 
+n29[label=GrantOwnerRights][color=red]; 
+n30[label=RejectOwnerRequest][color=red]; 
+n31[label=Archive][color=red]; 
+label=<<table align = "left" border="0" cellborder="0" cellspacing="1">
+<tr><td align="center"><b>OwnerRequest</b></td></tr><tr><td align="left">userAdmin</td></tr> 
+<tr><td align="left">owner</td></tr> 
+<tr><td align="left">reason</td></tr> 
+</table>>;color=blue
+}n1->n3
+n4->n6
+n4->n0
+n7->n9
+n10->n12
+n16->n0
+n20->n15
+n24->n4
+n25->n4
+n29->n23
+
+}

@@ -1,0 +1,350 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1267pt" height="859pt" viewBox="0.00 0.00 1266.85 859.00">
+<g id="graph0" class="graph" transform="translate(-213.69603240104033,777.5810844772046) scale(1)" data-name="G">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-855 1262.85,-855 1262.85,4 -4,4" style=""/>
+<g id="clust1" class="cluster" data-name="cluster_Token">
+
+<polygon fill="none" stroke="blue" points="522.09,-62 522.09,-420 622.37,-420 622.37,-62 522.09,-62" style=""/>
+<text text-anchor="start" x="553.67" y="-401.4" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Token</text>
+<text text-anchor="start" x="540.23" y="-379.4" font-family="Times,serif" font-size="14.00" style="">issuer</text>
+<text text-anchor="start" x="540.23" y="-358.4" font-family="Times,serif" font-size="14.00" style="">owner</text>
+<text text-anchor="start" x="540.23" y="-337.4" font-family="Times,serif" font-size="14.00" style="">description</text>
+<text text-anchor="start" x="540.23" y="-316.4" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="540.23" y="-295.4" font-family="Times,serif" font-size="14.00" style="">issued</text>
+<text text-anchor="start" x="540.23" y="-274.4" font-family="Times,serif" font-size="14.00" style="">lastPrice</text>
+<text text-anchor="start" x="540.23" y="-253.4" font-family="Times,serif" font-size="14.00" style="">currency</text>
+<text text-anchor="start" x="540.08" y="-232.4" font-family="Times,serif" font-size="14.00" style="">royaltyRate</text>
+</g>
+<g id="clust2" class="cluster" data-name="cluster_TokenOffer">
+
+<polygon fill="none" stroke="blue" points="718.53,-116 718.53,-516 860.63,-516 860.63,-116 718.53,-116" style=""/>
+<text text-anchor="start" x="754.2" y="-497.4" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">TokenOffer</text>
+<text text-anchor="start" x="754.58" y="-475.4" font-family="Times,serif" font-size="14.00" style="">issuer</text>
+<text text-anchor="start" x="754.58" y="-454.4" font-family="Times,serif" font-size="14.00" style="">owner</text>
+<text text-anchor="start" x="754.58" y="-433.4" font-family="Times,serif" font-size="14.00" style="">description</text>
+<text text-anchor="start" x="754.58" y="-412.4" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="754.58" y="-391.4" font-family="Times,serif" font-size="14.00" style="">issued</text>
+<text text-anchor="start" x="754.58" y="-370.4" font-family="Times,serif" font-size="14.00" style="">lastPrice</text>
+<text text-anchor="start" x="754.58" y="-349.4" font-family="Times,serif" font-size="14.00" style="">currency</text>
+<text text-anchor="start" x="754.58" y="-328.4" font-family="Times,serif" font-size="14.00" style="">newOwner</text>
+<text text-anchor="start" x="754.58" y="-307.4" font-family="Times,serif" font-size="14.00" style="">price</text>
+<text text-anchor="start" x="754.58" y="-286.4" font-family="Times,serif" font-size="14.00" style="">royaltyRate</text>
+</g>
+<g id="clust3" class="cluster" data-name="cluster_Payable">
+
+<polygon fill="none" stroke="blue" points="880.63,-116 880.63,-411 1000.25,-411 1000.25,-116 880.63,-116" style=""/>
+<text text-anchor="start" x="916.72" y="-391.9" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Payable</text>
+<text text-anchor="start" x="914.44" y="-369.9" font-family="Times,serif" font-size="14.00" style="">amount</text>
+<text text-anchor="start" x="914.44" y="-348.9" font-family="Times,serif" font-size="14.00" style="">currency</text>
+<text text-anchor="start" x="914.44" y="-327.9" font-family="Times,serif" font-size="14.00" style="">from</text>
+<text text-anchor="start" x="914.44" y="-306.9" font-family="Times,serif" font-size="14.00" style="">to</text>
+<text text-anchor="start" x="914.41" y="-285.9" font-family="Times,serif" font-size="14.00" style="">reference</text>
+</g>
+<g id="clust4" class="cluster" data-name="cluster_PaymentClaim">
+
+<polygon fill="none" stroke="blue" points="1020.25,-62 1020.25,-378 1130.53,-378 1130.53,-62 1020.25,-62" style=""/>
+<text text-anchor="start" x="1031.17" y="-359.4" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">PaymentClaim</text>
+<text text-anchor="start" x="1031.39" y="-337.4" font-family="Times,serif" font-size="14.00" style="">amount</text>
+<text text-anchor="start" x="1031.39" y="-316.4" font-family="Times,serif" font-size="14.00" style="">currency</text>
+<text text-anchor="start" x="1031.39" y="-295.4" font-family="Times,serif" font-size="14.00" style="">from</text>
+<text text-anchor="start" x="1031.39" y="-274.4" font-family="Times,serif" font-size="14.00" style="">to</text>
+<text text-anchor="start" x="1031.39" y="-253.4" font-family="Times,serif" font-size="14.00" style="">reference</text>
+<text text-anchor="start" x="1031.39" y="-232.4" font-family="Times,serif" font-size="14.00" style="">transactionID</text>
+</g>
+<g id="clust5" class="cluster" data-name="cluster_Receipt">
+
+<polygon fill="none" stroke="blue" points="1150.53,-8 1150.53,-345 1250.85,-345 1250.85,-8 1150.53,-8" style=""/>
+<text text-anchor="start" x="1178.14" y="-325.9" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Receipt</text>
+<text text-anchor="start" x="1162.69" y="-303.9" font-family="Times,serif" font-size="14.00" style="">amount</text>
+<text text-anchor="start" x="1162.69" y="-282.9" font-family="Times,serif" font-size="14.00" style="">currency</text>
+<text text-anchor="start" x="1162.69" y="-261.9" font-family="Times,serif" font-size="14.00" style="">from</text>
+<text text-anchor="start" x="1162.69" y="-240.9" font-family="Times,serif" font-size="14.00" style="">to</text>
+<text text-anchor="start" x="1162.69" y="-219.9" font-family="Times,serif" font-size="14.00" style="">reference</text>
+<text text-anchor="start" x="1162.59" y="-198.9" font-family="Times,serif" font-size="14.00" style="">transactionID</text>
+<text text-anchor="start" x="1162.69" y="-177.9" font-family="Times,serif" font-size="14.00" style="">received</text>
+</g>
+<g id="clust6" class="cluster" data-name="cluster_Issuer">
+
+<polygon fill="none" stroke="blue" points="253.25,-62 253.25,-348 396.44,-348 396.44,-62 253.25,-62" style=""/>
+<text text-anchor="start" x="306.57" y="-329.4" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Issuer</text>
+<text text-anchor="start" x="293.74" y="-307.4" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="293.85" y="-286.4" font-family="Times,serif" font-size="14.00" style="">issuer</text>
+</g>
+<g id="clust7" class="cluster" data-name="cluster_IssuerRequest">
+
+<polygon fill="none" stroke="blue" points="8,-116 8,-423 203.75,-423 203.75,-116 8,-116" style=""/>
+<text text-anchor="start" x="63.49" y="-403.9" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">IssuerRequest</text>
+<text text-anchor="start" x="63.88" y="-381.9" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="63.88" y="-360.9" font-family="Times,serif" font-size="14.00" style="">issuer</text>
+<text text-anchor="start" x="63.88" y="-339.9" font-family="Times,serif" font-size="14.00" style="">reason</text>
+</g>
+<g id="clust8" class="cluster" data-name="cluster_Owner">
+
+<polygon fill="none" stroke="blue" points="445.94,-428 445.94,-768 698.53,-768 698.53,-428 445.94,-428" style=""/>
+<text text-anchor="start" x="551.63" y="-749.4" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">Owner</text>
+<text text-anchor="start" x="541.13" y="-727.4" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="541.23" y="-706.4" font-family="Times,serif" font-size="14.00" style="">owner</text>
+</g>
+<g id="clust9" class="cluster" data-name="cluster_OwnerRequest">
+
+<polygon fill="none" stroke="blue" points="223.75,-536 223.75,-843 425.94,-843 425.94,-536 223.75,-536" style=""/>
+<text text-anchor="start" x="280.63" y="-823.9" font-family="Times,serif" font-weight="bold" font-size="14.00" style="">OwnerRequest</text>
+<text text-anchor="start" x="280.85" y="-801.9" font-family="Times,serif" font-size="14.00" style="">userAdmin</text>
+<text text-anchor="start" x="280.85" y="-780.9" font-family="Times,serif" font-size="14.00" style="">owner</text>
+<text text-anchor="start" x="280.85" y="-759.9" font-family="Times,serif" font-size="14.00" style="">reason</text>
+</g>
+<!-- n0 -->
+<g id="node1" class="node" pointer-events="visible" data-name="n0">
+
+<ellipse fill="none" stroke="green" cx="572.23" cy="-196" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-191.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node" pointer-events="visible" data-name="n1">
+
+<ellipse fill="none" stroke="red" cx="572.23" cy="-142" rx="31.89" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Offer</text>
+</g>
+<!-- n3 -->
+<g id="node4" class="node" pointer-events="visible" data-name="n3">
+
+<ellipse fill="none" stroke="green" cx="789.58" cy="-196" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="789.58" y="-191.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n1&#45;&gt;n3 -->
+<g id="edge1" class="edge" data-name="n1-&gt;n3">
+
+<path fill="none" stroke="black" d="M602.75,-147.68C628.24,-152.74 665.99,-160.63 698.53,-169 715.13,-173.27 733.26,-178.58 748.87,-183.36" style=""/>
+<polygon fill="black" stroke="black" points="748.14,-186.79 758.73,-186.4 750.21,-180.11 748.14,-186.79" style=""/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node" pointer-events="visible" data-name="n2">
+
+<ellipse fill="none" stroke="red" cx="572.23" cy="-88" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-83.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n4 -->
+<g id="node5" class="node" pointer-events="visible" data-name="n4">
+
+<ellipse fill="none" stroke="red" cx="789.58" cy="-250" rx="63.1" ry="18" style=""/>
+<text text-anchor="middle" x="789.58" y="-245.8" font-family="Times,serif" font-size="14.00" style="">AcceptToken</text>
+</g>
+<!-- n4&#45;&gt;n0 -->
+<g id="edge3" class="edge" data-name="n4-&gt;n0">
+
+<path fill="none" stroke="black" d="M741.54,-238.2C703.71,-228.72 651.07,-215.52 614.78,-206.42" style=""/>
+<polygon fill="black" stroke="black" points="615.56,-203.01 605.01,-203.97 613.86,-209.8 615.56,-203.01" style=""/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node" pointer-events="visible" data-name="n6">
+
+<ellipse fill="none" stroke="green" cx="940.44" cy="-250" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="940.44" y="-245.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n4&#45;&gt;n6 -->
+<g id="edge2" class="edge" data-name="n4-&gt;n6">
+
+<path fill="none" stroke="black" d="M852.85,-250C866.68,-250 881.08,-250 894.09,-250" style=""/>
+<polygon fill="black" stroke="black" points="894.17,-253.5 904.17,-250 894.17,-246.5 894.17,-253.5" style=""/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node" pointer-events="visible" data-name="n5">
+
+<ellipse fill="none" stroke="red" cx="789.58" cy="-142" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="789.58" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n7 -->
+<g id="node8" class="node" pointer-events="visible" data-name="n7">
+
+<ellipse fill="none" stroke="red" cx="940.44" cy="-196" rx="51.62" ry="18" style=""/>
+<text text-anchor="middle" x="940.44" y="-191.8" font-family="Times,serif" font-size="14.00" style="">ClaimPaid</text>
+</g>
+<!-- n9 -->
+<g id="node10" class="node" pointer-events="visible" data-name="n9">
+
+<ellipse fill="none" stroke="green" cx="1075.39" cy="-196" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="1075.39" y="-191.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n7&#45;&gt;n9 -->
+<g id="edge4" class="edge" data-name="n7-&gt;n9">
+
+<path fill="none" stroke="black" d="M992.46,-196C1004.47,-196 1017.19,-196 1028.93,-196" style=""/>
+<polygon fill="black" stroke="black" points="1028.96,-199.5 1038.96,-196 1028.96,-192.5 1028.96,-199.5" style=""/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node" pointer-events="visible" data-name="n8">
+
+<ellipse fill="none" stroke="red" cx="940.44" cy="-142" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="940.44" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n10 -->
+<g id="node11" class="node" pointer-events="visible" data-name="n10">
+
+<ellipse fill="none" stroke="red" cx="1075.39" cy="-142" rx="42.27" ry="18" style=""/>
+<text text-anchor="middle" x="1075.39" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Receive</text>
+</g>
+<!-- n12 -->
+<g id="node13" class="node" pointer-events="visible" data-name="n12">
+
+<ellipse fill="none" stroke="green" cx="1200.69" cy="-142" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="1200.69" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n10&#45;&gt;n12 -->
+<g id="edge5" class="edge" data-name="n10-&gt;n12">
+
+<path fill="none" stroke="black" d="M1117.79,-142C1129.48,-142 1142.26,-142 1154.17,-142" style=""/>
+<polygon fill="black" stroke="black" points="1154.37,-145.5 1164.37,-142 1154.37,-138.5 1154.37,-145.5" style=""/>
+</g>
+<!-- n11 -->
+<g id="node12" class="node" pointer-events="visible" data-name="n11">
+
+<ellipse fill="none" stroke="red" cx="1075.39" cy="-88" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="1075.39" y="-83.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n13 -->
+<g id="node14" class="node" pointer-events="visible" data-name="n13">
+
+<ellipse fill="none" stroke="red" cx="1200.69" cy="-88" rx="42.33" ry="18" style=""/>
+<text text-anchor="middle" x="1200.69" y="-83.8" font-family="Times,serif" font-size="14.00" style="">Dismiss</text>
+</g>
+<!-- n14 -->
+<g id="node15" class="node" pointer-events="visible" data-name="n14">
+
+<ellipse fill="none" stroke="red" cx="1200.69" cy="-34" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="1200.69" y="-29.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n15 -->
+<g id="node16" class="node" pointer-events="visible" data-name="n15">
+
+<ellipse fill="none" stroke="green" cx="324.85" cy="-250" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-245.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n16 -->
+<g id="node17" class="node" pointer-events="visible" data-name="n16">
+
+<ellipse fill="none" stroke="green" cx="324.85" cy="-196" rx="54.48" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-191.8" font-family="Times,serif" font-size="14.00" style="">MintToken</text>
+</g>
+<!-- n16&#45;&gt;n0 -->
+<g id="edge6" class="edge" data-name="n16-&gt;n0">
+
+<path fill="none" stroke="black" d="M379.39,-196C423.2,-196 484.48,-196 525.9,-196" style=""/>
+<polygon fill="black" stroke="black" points="525.97,-199.5 535.97,-196 525.97,-192.5 525.97,-199.5" style=""/>
+</g>
+<!-- n17 -->
+<g id="node18" class="node" pointer-events="visible" data-name="n17">
+
+<ellipse fill="none" stroke="red" cx="324.85" cy="-142" rx="63.7" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-137.8" font-family="Times,serif" font-size="14.00" style="">RevokeIssuer</text>
+</g>
+<!-- n18 -->
+<g id="node19" class="node" pointer-events="visible" data-name="n18">
+
+<ellipse fill="none" stroke="red" cx="324.85" cy="-88" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-83.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n19 -->
+<g id="node20" class="node" pointer-events="visible" data-name="n19">
+
+<ellipse fill="none" stroke="green" cx="105.88" cy="-304" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="105.88" y="-299.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n20 -->
+<g id="node21" class="node" pointer-events="visible" data-name="n20">
+
+<ellipse fill="none" stroke="red" cx="105.88" cy="-250" rx="77.6" ry="18" style=""/>
+<text text-anchor="middle" x="105.88" y="-245.8" font-family="Times,serif" font-size="14.00" style="">GrantIssuerRight</text>
+</g>
+<!-- n20&#45;&gt;n15 -->
+<g id="edge7" class="edge" data-name="n20-&gt;n15">
+
+<path fill="none" stroke="black" d="M183.68,-250C215.35,-250 250.97,-250 278.38,-250" style=""/>
+<polygon fill="black" stroke="black" points="278.45,-253.5 288.45,-250 278.45,-246.5 278.45,-253.5" style=""/>
+</g>
+<!-- n21 -->
+<g id="node22" class="node" pointer-events="visible" data-name="n21">
+
+<ellipse fill="none" stroke="red" cx="105.88" cy="-196" rx="89.75" ry="18" style=""/>
+<text text-anchor="middle" x="105.88" y="-191.8" font-family="Times,serif" font-size="14.00" style="">RejectIssuerRequest</text>
+</g>
+<!-- n22 -->
+<g id="node23" class="node" pointer-events="visible" data-name="n22">
+
+<ellipse fill="none" stroke="red" cx="105.88" cy="-142" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="105.88" y="-137.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n23 -->
+<g id="node24" class="node" pointer-events="visible" data-name="n23">
+
+<ellipse fill="none" stroke="green" cx="572.23" cy="-670" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-665.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n24 -->
+<g id="node25" class="node" pointer-events="visible" data-name="n24">
+
+<ellipse fill="none" stroke="green" cx="572.23" cy="-616" rx="118.09" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-611.8" font-family="Times,serif" font-size="14.00" style="">AcceptTokenAsNewOwner</text>
+</g>
+<!-- n24&#45;&gt;n4 -->
+<g id="edge8" class="edge" data-name="n24-&gt;n4">
+
+<path fill="none" stroke="black" d="M671.66,-606.09C681.56,-601.93 690.8,-596.37 698.53,-589 744.01,-545.63 774.69,-351.82 784.87,-278.36" style=""/>
+<polygon fill="black" stroke="black" points="788.4,-278.41 786.28,-268.03 781.46,-277.47 788.4,-278.41" style=""/>
+</g>
+<!-- n25 -->
+<g id="node26" class="node" pointer-events="visible" data-name="n25">
+
+<ellipse fill="none" stroke="green" cx="572.23" cy="-562" rx="90.32" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-557.8" font-family="Times,serif" font-size="14.00" style="">AcceptTokenByKey</text>
+</g>
+<!-- n25&#45;&gt;n4 -->
+<g id="edge9" class="edge" data-name="n25-&gt;n4">
+
+<path fill="none" stroke="black" d="M658.28,-556.28C673.05,-551.96 687.26,-545.26 698.53,-535 773.69,-466.58 786.55,-336.01 788.45,-278.45" style=""/>
+<polygon fill="black" stroke="black" points="791.95,-278.35 788.69,-268.27 784.95,-278.19 791.95,-278.35" style=""/>
+</g>
+<!-- n26 -->
+<g id="node27" class="node" pointer-events="visible" data-name="n26">
+
+<ellipse fill="none" stroke="red" cx="572.23" cy="-508" rx="92.07" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-503.8" font-family="Times,serif" font-size="14.00" style="">RevokeOwnerRights</text>
+</g>
+<!-- n27 -->
+<g id="node28" class="node" pointer-events="visible" data-name="n27">
+
+<ellipse fill="none" stroke="red" cx="572.23" cy="-454" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="572.23" y="-449.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+<!-- n28 -->
+<g id="node29" class="node" pointer-events="visible" data-name="n28">
+
+<ellipse fill="none" stroke="green" cx="324.85" cy="-724" rx="36.47" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-719.8" font-family="Times,serif" font-size="14.00" style="">Create</text>
+</g>
+<!-- n29 -->
+<g id="node30" class="node" pointer-events="visible" data-name="n29">
+
+<ellipse fill="none" stroke="red" cx="324.85" cy="-670" rx="84.55" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-665.8" font-family="Times,serif" font-size="14.00" style="">GrantOwnerRights</text>
+</g>
+<!-- n29&#45;&gt;n23 -->
+<g id="edge10" class="edge" data-name="n29-&gt;n23">
+
+<path fill="none" stroke="black" d="M409.61,-670C448.45,-670 493.09,-670 525.6,-670" style=""/>
+<polygon fill="black" stroke="black" points="525.71,-673.5 535.71,-670 525.71,-666.5 525.71,-673.5" style=""/>
+</g>
+<!-- n30 -->
+<g id="node31" class="node" pointer-events="visible" data-name="n30">
+
+<ellipse fill="none" stroke="red" cx="324.85" cy="-616" rx="93.18" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-611.8" font-family="Times,serif" font-size="14.00" style="">RejectOwnerRequest</text>
+</g>
+<!-- n31 -->
+<g id="node32" class="node" pointer-events="visible" data-name="n31">
+
+<ellipse fill="none" stroke="red" cx="324.85" cy="-562" rx="42.28" ry="18" style=""/>
+<text text-anchor="middle" x="324.85" y="-557.8" font-family="Times,serif" font-size="14.00" style="">Archive</text>
+</g>
+</g>
+</svg>

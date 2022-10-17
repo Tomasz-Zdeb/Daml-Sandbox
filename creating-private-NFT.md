@@ -68,3 +68,7 @@
   * Then a choice that allows to accept the offer by the key should be added in the `Owner` template
 
   An actual reason to use **keys** over **Contract ID's** is that **Contract ID's** can change. For example: when somebody updates a contract by changing some field, the **ID** will be expired since the old version of contract will be archieved and the new one will be created.
+
+The final result can look like this:
+
+  ![project modules diagram](./App4PrivateNFT/graph-vector.svg)
