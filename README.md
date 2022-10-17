@@ -205,7 +205,9 @@ do
 
         return (newToken, fromNewOwnerToOwner)
 ```
+
 ---
+
 ## NFT
 
 stands for **Private Non-fungible token**.
