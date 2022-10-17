@@ -48,6 +48,9 @@ template TokenOffer
   where
     signatory issuer, userAdmin, owner
 
+    key (issuer, owner, description): (Party, Party, Text)
+    maintainer key._2
+    
     choice AcceptToken: (ContractId Token, ContractId Payable, ContractId Payable)
       observer newOwner
       controller newOwner
