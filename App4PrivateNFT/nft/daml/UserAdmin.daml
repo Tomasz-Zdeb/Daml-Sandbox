@@ -9,6 +9,7 @@ template Issuer
     issuer: Party
   where
     signatory userAdmin
+    observer issuer
 
     nonconsuming choice MintToken: ContractId Token
       with
