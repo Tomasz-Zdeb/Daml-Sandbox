@@ -206,6 +206,12 @@ do
         return (newToken, fromNewOwnerToOwner)
 ```
 
+## Optionals: opX
+
+In **Daml** it is a concept of a variable being allowed to be `null`.
+
+There's a dedicated module in [Daml Standard Library](https://docs.daml.com/daml/stdlib/DA-Optional.html) to help deal with optional parameters.
+
 ---
 
 ## NFT
