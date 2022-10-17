@@ -1,6 +1,30 @@
 module Main where
 
+import UserAdmin
+
 import Daml.Script
 
 setup : Script ()
 setup = script do
+  alice <- allocatePartyWithHint "Alice" (PartyIdHint "Alice")
+  bob <- allocatePartyWithHint "Bob" (PartyIdHint "Bob")
+  userAdmin <- allocatePartyWithHint "UserAdmin" (PartyIdHint "UserAdmin")
+
+  now <- getTime
+
+  aliceIssuer <- submit userAdmin do
+    createCmd Issuer
+      with
+        userAdmin = userAdmin
+        issuer = alice
+
+  submit alice do
+    exerciseCmd aliceIssuer MintToken
+      with
+        description = "Alien picture 1"
+        initialPrice = 100.00
+        currency = "USD"
+        royaltyRate = 0.05
+
+
+  return ()
