@@ -55,3 +55,16 @@
     * behaviours:
       * a choice that allows **admin** to accept a request, which results in `Owner` contract creation.
       * a choice that allows **admin** to reject a request. That choice simply archives the contract.
+
+* Consider adding a functionality, that allows to accept token offer by  **key**.
+
+  * A key to uniqely identify the `TokenOffer` needs to be added. For example:
+
+    ```haskell
+    key (issuer, owner, description): (Party, Party, Text)
+      maintainer key._2
+    ```
+  
+  * Then a choice that allows to accept the offer by the key should be added in the `Owner` template
+
+  An actual reason to use **keys** over **Contract ID's** is that **Contract ID's** can change. For example: when somebody updates a contract by changing some field, the **ID** will be expired since the old version of contract will be archieved and the new one will be created.
