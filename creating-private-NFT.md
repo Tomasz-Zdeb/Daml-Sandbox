@@ -34,7 +34,7 @@
 
 * Since this **NFT** is intended to be private, there is a need to implement the permission module: E.g. `UserAdmin module`. There should be two kind of user templates:
   * `Issuer template` - should contain:
-    * data fields to represent: **NFT issuer** party and the **admin** party, that will be approving the issuer access, so the **admin** shoud be stated as **signatory** of this contract.
+    * data fields to represent: **NFT issuer** party and the **admin** party, that will be approving the issuer access, so the **admin** should be stated as **signatory** of this contract and **issuer** should be stated as **observer** to make him able to execute the choice.
     * behaviours:
       * a choice that will allow the **issuer** to actualy issue - mint the token. With the default behaviour: a contract is being archived after execution of a choice, which in this case would mean that the permission would allow to mint only one token. Therefore changing the default behavior - not to archive the contract after execution of the choice, could be a way to give permission to the issuer once and allow him to mint tokens multiple times. `nonconsuming` keyword is used to do so.
       * a choice that revokes the **issuer** rights, in order to keep control over issuers. The choice can be a blank one, since the only desired outcome is to archive the contract.
