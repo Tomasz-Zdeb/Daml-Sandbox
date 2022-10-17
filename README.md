@@ -232,3 +232,5 @@ Guide on example of **NFT** created using **Daml** can be found [here](./creatin
 * [Daml Cheat Sheet](https://docs.daml.com/cheat-sheet)
 
 * [Daml Talent Lms (requires account)](https://daml.talentlms.com/dashboard/index)
+
+* [Daml Docs article on visualizing Daml Contracts automatically](https://docs.daml.com/tools/visual.html)
