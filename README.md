@@ -206,6 +206,13 @@ do
         return (newToken, fromNewOwnerToOwner)
 ```
 
+## Manual Testing
+
+`Main` module is a good place to perform some testing actions. Basic. The way to test the functionality is to:
+
+* Create some parties
+* Perform interactions between them
+
 ## Optionals: opX
 
 In **Daml** it is a concept of a variable being allowed to be `null`.
