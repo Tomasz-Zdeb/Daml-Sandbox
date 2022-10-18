@@ -151,3 +151,38 @@ Tests could be performed as a script in `Main.daml` file. E.g.
       with
         offerId = bobOffer
   ```
+
+## Further improvement
+
+Feature that skips royalty payment for the first transaction - when the **issuer** sells the **token**, could make more sense than additionally paying royalty in that scenario. To implement that:
+
+* convert the **royalty payment** action to conditional
+  
+  ```haskell
+  condRoyaltyPayment <- if owner == issuer
+          then return None
+          else Some <$> create Payable
+            with
+              from = newOwner
+              to = issuer
+              amount = price * royaltyRate
+              currency
+              reference = "Royalty for '" <> description <>"'"
+  ```
+
+* update the returned variable name if it was changed.
+* update returned type to **optional**
+
+  ```haskell
+  choice AcceptToken: (ContractId Token, ContractId Payable, Optional (ContractId Payable))
+  ```
+
+* update owner token acceptation choices returned parameters to optional
+
+  ```haskell
+  nonconsuming choice AcceptTokenAsNewOwner: (ContractId Token, ContractId Payable, Optional(ContractId Payable))
+  ```
+
+  ```haskell
+  nonconsuming choice AcceptTokenByKey: (ContractId Token, ContractId Payable, Optional(ContractId Payable))
+  ```
