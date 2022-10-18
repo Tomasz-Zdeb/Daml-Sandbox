@@ -251,6 +251,16 @@ do
   return (SomeTemplate x)
 ```
 
+## If-else statement
+
+```haskell
+condRoyaltyPayment <- if owner == issuer
+          then return None
+          else Some <$> create Payable
+            with
+              ...
+```
+
 ---
 
 ## NFT
