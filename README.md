@@ -217,6 +217,12 @@ do
 
 In **Daml** it is a concept of a variable being allowed to be `null`.
 
+For examlpe when declaring one of the returned values of a choice to be **optional**, code would look like below:
+
+```haskell
+choice AcceptToken: (ContractId Token, ContractId Payable, Optional (ContractId Payable))
+```
+
 There's a dedicated module in [Daml Standard Library](https://docs.daml.com/daml/stdlib/DA-Optional.html) to help deal with optional parameters.
 
 ## Fmap: <$>
