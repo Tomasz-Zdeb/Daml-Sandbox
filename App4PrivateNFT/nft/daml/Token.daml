@@ -53,6 +53,7 @@ template TokenOffer
     maintainer key._2
     
     choice AcceptToken: (ContractId Token, ContractId Payable, Optional (ContractId Payable))
+      observer newOwner
       controller newOwner
       do
         fromNewOwnerToOwner <- create Payable
