@@ -41,6 +41,7 @@ template IssuerRequest
     reason: Text
   where
     signatory issuer
+    observer userAdmin
 
     choice GrantIssuerRight: ContractId Issuer
       observer userAdmin
@@ -92,6 +93,7 @@ template OwnerRequest
     reason: Text
   where
     signatory owner
+    observer userAdmin
 
     choice GrantOwnerRights: ContractId Owner
       observer userAdmin
