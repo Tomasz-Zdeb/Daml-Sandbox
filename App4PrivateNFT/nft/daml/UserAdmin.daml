@@ -60,6 +60,7 @@ template Owner
     owner: Party
   where
     signatory userAdmin
+    observer owner
 
     nonconsuming choice AcceptTokenAsNewOwner: (ContractId Token, ContractId Payable, ContractId Payable)
       with 

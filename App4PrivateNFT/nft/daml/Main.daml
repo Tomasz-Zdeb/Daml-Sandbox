@@ -33,4 +33,22 @@ setup = script do
         newOwner = bob
         price = 200.00
 
+  bobRequest <- submit bob do
+    createCmd OwnerRequest
+      with
+        userAdmin = userAdmin
+        owner = bob
+        reason = "I'm legit guy who trades NFTs"
+
+  bobOwner <- submit userAdmin do
+    exerciseCmd bobRequest GrantOwnerRights
+
+  submit bob do
+    exerciseCmd bobOwner AcceptTokenAsNewOwner
+      with
+        offerId = bobOffer
+
+  -- submit bob do
+  --   exerciseCmd bobOffer AcceptToken
+
   return ()

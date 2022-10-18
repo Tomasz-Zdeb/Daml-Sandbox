@@ -47,12 +47,12 @@ template TokenOffer
     royaltyRate: Decimal
   where
     signatory issuer, userAdmin, owner
+    observer newOwner
 
     key (issuer, owner, description): (Party, Party, Text)
     maintainer key._2
     
     choice AcceptToken: (ContractId Token, ContractId Payable, ContractId Payable)
-      observer newOwner
       controller newOwner
       do
         fromNewOwnerToOwner <- create Payable
