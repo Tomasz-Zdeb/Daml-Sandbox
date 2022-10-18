@@ -62,7 +62,7 @@ template Owner
     signatory userAdmin
     observer owner
 
-    nonconsuming choice AcceptTokenAsNewOwner: (ContractId Token, ContractId Payable, ContractId Payable)
+    nonconsuming choice AcceptTokenAsNewOwner: (ContractId Token, ContractId Payable, Optional(ContractId Payable))
       with 
         offerId: ContractId TokenOffer
       observer owner
@@ -70,7 +70,7 @@ template Owner
       do
         exercise offerId AcceptToken
 
-    nonconsuming choice AcceptTokenByKey: (ContractId Token, ContractId Payable, ContractId Payable)
+    nonconsuming choice AcceptTokenByKey: (ContractId Token, ContractId Payable, Optional(ContractId Payable))
       with
         issuer: Party
         currentOwner: Party
