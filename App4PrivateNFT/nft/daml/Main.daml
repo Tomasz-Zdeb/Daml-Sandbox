@@ -9,6 +9,7 @@ setup : Script ()
 setup = script do
   alice <- allocatePartyWithHint "Alice" (PartyIdHint "Alice")
   bob <- allocatePartyWithHint "Bob" (PartyIdHint "Bob")
+  charlie <- allocatePartyWithHint "Charlie" (PartyIdHint "Charlie")
   userAdmin <- allocatePartyWithHint "UserAdmin" (PartyIdHint "UserAdmin")
 
   now <- getTime
@@ -47,5 +48,12 @@ setup = script do
     exerciseCmd bobOwner AcceptTokenAsNewOwner
       with
         offerId = bobOffer
+
+  charlieRequest <- submit charlie do
+    createCmd OwnerRequest
+      with
+        userAdmin = userAdmin
+        owner = charlie
+        reason = "I'm bob's friend who also trades NFTs"
 
   return ()
