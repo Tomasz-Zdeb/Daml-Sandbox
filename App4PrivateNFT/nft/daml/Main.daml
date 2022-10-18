@@ -59,9 +59,6 @@ setup = script do
       with
         offerId = bobOffer
 
-  -- charlieOwner <- submit userAdmin do
-  --   exerciseCmd charlieRequest GrantOwnerRights
-
   charlieOffer <- submit bob do
     exerciseCmd bobToken Offer
       with
