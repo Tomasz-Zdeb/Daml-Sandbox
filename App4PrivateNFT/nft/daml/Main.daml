@@ -1,6 +1,7 @@
 module Main where
 
 import UserAdmin
+import Token
 
 import Daml.Script
 
@@ -18,7 +19,7 @@ setup = script do
         userAdmin = userAdmin
         issuer = alice
 
-  submit alice do
+  originalToken <- submit alice do
     exerciseCmd aliceIssuer MintToken
       with
         description = "Alien picture 1"
@@ -26,5 +27,10 @@ setup = script do
         currency = "USD"
         royaltyRate = 0.05
 
+  bobOffer <- submit alice do
+    exerciseCmd originalToken Offer
+      with
+        newOwner = bob
+        price = 200.00
 
   return ()
