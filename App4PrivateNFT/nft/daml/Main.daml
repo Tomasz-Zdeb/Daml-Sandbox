@@ -48,7 +48,4 @@ setup = script do
       with
         offerId = bobOffer
 
-  -- submit bob do
-  --   exerciseCmd bobOffer AcceptToken
-
   return ()
