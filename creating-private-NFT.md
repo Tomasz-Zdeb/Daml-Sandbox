@@ -186,3 +186,38 @@ Feature that skips royalty payment for the first transaction - when the **issuer
   ```haskell
   nonconsuming choice AcceptTokenByKey: (ContractId Token, ContractId Payable, Optional(ContractId Payable))
   ```
+
+Last but not least check the result - there should not be the **royalty** `Payable` contract.
+
+## Further testing
+
+* Add another **Party** E.g. `charlie`
+* Create `OwnerRequest` contract for that party
+* Modify bob's offer acceptance to get a handle on it
+
+  ```haskell
+  (bobToken, _, _) <- submit bob do
+    exerciseCmd bobOwner AcceptTokenAsNewOwner
+      with
+        offerId = bobOffer
+  ```
+
+* Offer the coin to charlie
+
+  ```haskell
+  charlieOffer <- submit bob do
+    exerciseCmd bobToken Offer
+      with
+        newOwner = charlie
+        price = 300.00
+
+  ```
+
+* Accept the coin by charlie
+
+  ```haskell
+  submit charlie do 
+    exerciseCmd charlieOwner AcceptTokenAsNewOwner
+      with
+        offerId = charlieOffer
+  ```
