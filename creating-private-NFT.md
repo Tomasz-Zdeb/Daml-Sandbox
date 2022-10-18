@@ -72,3 +72,82 @@
 The final result can look like this:
 
   ![project modules diagram](./App4PrivateNFT/graph-vector.svg)
+
+## Manual testing
+
+Tests could be performed as a script in `Main.daml` file. E.g.
+
+* At first some parties should be declared for tests.
+
+  ```haskell
+  alice <- allocatePartyWithHint "Alice" (PartyIdHint "Alice")
+  bob <- allocatePartyWithHint "Bob" (PartyIdHint "Bob")
+  userAdmin <- allocatePartyWithHint "UserAdmin" (PartyIdHint "UserAdmin")
+  ```
+
+* As well as some helpers
+
+  ```haskell
+  now <- getTime
+  ```
+
+* Then **user creation** contract could be tested.
+  
+  ```haskell
+  aliceIssuer <- submit userAdmin do
+    createCmd Issuer
+      with
+        userAdmin = userAdmin
+        issuer = alice
+  ```
+
+  It is good to assign the **Issuer** to some variable, to have a handle to it for later use.
+
+* **Token minting** choice
+
+  ```haskell
+  originalToken <- submit alice do
+    exerciseCmd aliceIssuer MintToken
+      with
+        description = "Alien picture 1"
+        initialPrice = 100.00
+        currency = "USD"
+        royaltyRate = 0.05
+  ```
+
+* **Token offering** choice
+  
+  ```haskell
+  bobOffer <- submit alice do
+    exerciseCmd originalToken Offer
+      with
+        newOwner = bob
+        price = 200.00
+  ```
+
+* **Owner request** contract
+
+  ```haskell
+  bobRequest <- submit bob do
+    createCmd OwnerRequest
+      with
+        userAdmin = userAdmin
+        owner = bob
+        reason = "I'm legit guy who trades NFTs"
+  ```
+
+* **Owner rights granting** choice
+
+  ```haskell
+  bobOwner <- submit userAdmin do
+    exerciseCmd bobRequest GrantOwnerRights
+  ```
+
+* **Token accepting** choice
+
+  ```haskell
+  submit bob do
+    exerciseCmd bobOwner AcceptTokenAsNewOwner
+      with
+        offerId = bobOffer
+  ```
