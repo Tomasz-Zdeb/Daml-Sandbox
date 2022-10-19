@@ -304,6 +304,34 @@ Additional info can be found in [Daml Docs article](https://docs.daml.com/tools/
 
 ---
 
+## Running the project in **Daml sandbox**
+
+* `daml.yaml` file must be configured at the beginning. This includes:
+  * do make sure that the init script points to the script at `Main.yaml`
+
+    ```yaml
+    init-script: Main:setup
+    ```
+
+  * get familiar with [Daml Discuss Issue: Navigator not showing contracts](https://discuss.daml.com/t/navigator-not-showing-contracts/5284)
+  * **do not** add parties included in the script or any other parties to conifuration file!
+  * disable **user management feature**
+
+    ```yaml
+    navigator-options:
+    - --feature-user-management=false
+    ```
+
+* run the sandbox
+
+  ```powershell
+  daml start
+  ```
+
+In case of any problems Daml docs on: [Daml Sandbox](https://docs.daml.com/tools/sandbox.html) and [Navigator](https://docs.daml.com/tools/navigator/index.html) can be found helpful.  
+
+---
+
 ## References
 
 * [Daml Docs](https://docs.daml.com/)
