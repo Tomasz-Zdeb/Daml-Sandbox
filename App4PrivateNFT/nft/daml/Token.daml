@@ -21,6 +21,7 @@ template Token
     royaltyRate: Decimal
   where
     signatory issuer, userAdmin
+    observer owner
     
     choice Offer: ContractId TokenOffer
       with
