@@ -332,6 +332,24 @@ In case of any problems Daml docs on: [Daml Sandbox](https://docs.daml.com/tools
 
 ---
 
+## Creating **TypeScript**/**JavaScript** bindings
+
+* build the project
+
+  ```powershell
+  daml build
+  ```
+  
+  That will result in `.DAR` file creation in `.daml/dist` directory.
+
+* use `codegen` utility to actually generate **JS**/**TS** bindings.
+
+  ```powershell
+  daml codegen js -o <output_directory> <dar_file_path>
+  ```  
+
+---
+
 ## References
 
 * [Daml Docs](https://docs.daml.com/)
