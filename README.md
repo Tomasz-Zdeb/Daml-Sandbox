@@ -348,6 +348,34 @@ In case of any problems Daml docs on: [Daml Sandbox](https://docs.daml.com/tools
   daml codegen js -o <output_directory> <dar_file_path>
   ```  
 
+## Using **JSON API** with application running in **Daml Sandbox**
+
+First make sure that sandbox with the project is running `daml start`. Default port for the **JSON API** is `7575`.
+Running a plain request to the **JSON API** will result in authentication error.
+
+```bash
+curl http://localhost:7575/v1/query
+```
+
+> errors":["missing Authorization header with OAuth 2.0 Bearer Token"],"status":401}
+
+Therefore some token needs to be generated and later attached to any request to actually authenticate that the issuer of the **HTTP** request is really representing the party that he claims he is.
+
+To do so <https://jwt.io> will be used. Remember that it's only **Sandbox** solution. In production some thir party authentication service will be responsible for issuing and validation of tokens.
+
+According to [Daml Docs instructions](https://docs.daml.com/json-api/index.html#:~:text=For%20a%20ledger%20without%20authorization%2C%20e.g.%2C%20the%20default%20configuration%20of%20Daml%20Sandbox%2C%20you%20can%20use%20https%3A//jwt.io%20(or%20the%20JWT%20library%20of%20your%20choice)%20to%20generate%20your%20token.%20You%20can%20use%20an%20arbitrary%20secret%20here.%20The%20default%20%E2%80%9Cheader%E2%80%9D%20is%20fine.%20Under%20%E2%80%9CPayload%E2%80%9D%2C%20fill%20in%3A) given payload has to be included:
+
+```json
+{
+  "https://daml.com/ledger-api": {
+    "ledgerId": "sandbox",
+    "applicationId": "foobar",
+    "actAs": ["Alice"]
+  }
+}
+```
+
+
 ---
 
 ## References
