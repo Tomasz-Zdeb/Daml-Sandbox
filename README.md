@@ -375,6 +375,20 @@ According to [Daml Docs instructions](https://docs.daml.com/json-api/index.html#
 }
 ```
 
+In my case the:
+
+* `/v1/query` - endpoind gave successfull response (Code 200), but the returned value was empty
+
+Other endpoints such as:
+
+* `/v1/parties`
+* `/v1/users`
+* `/v1/packages`
+
+returned values as expected.
+
+Reason for such behaviour of `/v1/query` endpoint has not been yet identified.
+
 ---
 
 ## References
