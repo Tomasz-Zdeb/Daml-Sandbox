@@ -375,7 +375,6 @@ According to [Daml Docs instructions](https://docs.daml.com/json-api/index.html#
 }
 ```
 
-
 ---
 
 ## References
