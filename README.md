@@ -293,7 +293,7 @@ Guide on example of **NFT** created using **Daml** can be found [here](./creatin
 is used to generate the diagram. To preview generated diagram use any **Graphviz** extension of choice. In my case couple of them were not working.
 
 Example diagram:
-![example module diagram](./App4PrivateNFT/graph-vector.svg)
+![example module diagram](./App-PrivateNFT/graph-vector.svg)
 
 * bold is used to display **template name**
 * underneath **data fields** are displayed with regular font
