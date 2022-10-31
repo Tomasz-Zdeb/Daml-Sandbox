@@ -71,7 +71,7 @@
 
 The final result can look like this:
 
-  ![project modules diagram](./App4PrivateNFT/graph-vector.svg)
+  ![project modules diagram](./App-PrivateNFT/graph-vector.svg)
 
 ## Manual testing
 
