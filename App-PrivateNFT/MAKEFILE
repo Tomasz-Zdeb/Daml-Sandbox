@@ -1,12 +1,12 @@
 build:
-  cd nft && daml build
-  cd nft && daml codegen js -o daml.js .daml/dist/*.dar
+	cmd.exe /c "cd nft && daml build"
+	cmd.exe /c "cd nft && daml codegen js -o daml.js .daml/dist/nft-0.0.1.dar"
 
 deploy: build
-  mkdir -p deploy
-  cp nft/.daml/dist/*.dar deploy
+	mkdir -p deploy
+	cp nft/.daml/dist/nft-0.0.1.dar deploy
 
 clean:
-  cd nft && rm -rf .daml
-  cd nft && rm -rf daml.js
-  rm -rf deploy
+	cd nft && rm -rf .daml
+	cd nft && rm -rf daml.js
+	rm -rf deploy
